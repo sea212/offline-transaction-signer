@@ -77,7 +77,7 @@ class MainWindow(QDialog):
         gas_price = int(self.textbox_gasprice.text())
         assert(gas_price >= 0)
 
-        gas = int(self.textbox_gasprice.text())
+        gas = int(self.textbox_gas.text())
         assert(gas >= 0)
 
         data = self.textbox_data.text().encode("utf-8")
