@@ -108,7 +108,6 @@ class MainWindow(QDialog):
             priv_key = keys.decode_keystore_json(jdata, keystorepw)
             priv_key = self.safeBytesToHex(priv_key, 64)
 
-        print(priv_key)
         assert(len(priv_key) == 66 or len(priv_key) == 64)
 
         #address_sender = hex(int.from_bytes(keys.privtoaddr(priv_key), "big"))
