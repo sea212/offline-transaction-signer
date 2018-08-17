@@ -7,40 +7,21 @@
     <x>0</x>
     <y>0</y>
     <width>496</width>
-    <height>697</height>
+    <height>704</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Transaction data generation Tool alpha 0.0.1</string>
+   <string>Transaction data generation Tool alpha 0.0.2</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="10" column="1">
-    <widget class="QLineEdit" name="textbox_keystore">
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_address">
      <property name="text">
-      <string/>
-     </property>
-     <property name="placeholderText">
-      <string>Enter filepath to keystore</string>
+      <string>Address of the receiver:</string>
      </property>
     </widget>
    </item>
-   <item row="14" column="1">
-    <widget class="QLineEdit" name="textbox_privatekey">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-     <property name="placeholderText">
-      <string>Enter private key (hex)</string>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="1">
+   <item row="9" column="1">
     <widget class="QLineEdit" name="textbox_networkid">
      <property name="enabled">
       <bool>false</bool>
@@ -56,14 +37,17 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label_address">
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_amount">
+     <property name="toolTip">
+      <string>select input method for network id</string>
+     </property>
      <property name="text">
-      <string>Address of the receiver:</string>
+      <string>Amount:</string>
      </property>
     </widget>
    </item>
-   <item row="6" column="1" rowspan="2">
+   <item row="7" column="1" rowspan="2">
     <widget class="QComboBox" name="combobox_networkid">
      <property name="toolTip">
       <string>https://ethereum.stackexchange.com/questions/17051/how-to-select-a-network-id-or-is-there-a-list-of-network-ids</string>
@@ -113,14 +97,21 @@
      </item>
     </widget>
    </item>
-   <item row="5" column="0">
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_gasprice">
+     <property name="text">
+      <string>Gas price per gas unit:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
     <widget class="QLabel" name="label_data">
      <property name="text">
       <string>Additional data:</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="1" colspan="4">
+   <item row="5" column="1" colspan="4">
     <widget class="QLineEdit" name="textbox_gas">
      <property name="inputMethodHints">
       <set>Qt::ImhDigitsOnly</set>
@@ -133,31 +124,7 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="0">
-    <widget class="QLabel" name="label_address_2">
-     <property name="toolTip">
-      <string>select input method for network id</string>
-     </property>
-     <property name="text">
-      <string>Amount:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="0">
-    <widget class="QLabel" name="label_gasprice">
-     <property name="text">
-      <string>Gas price per gas unit:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="0">
-    <widget class="QLabel" name="label_gas">
-     <property name="text">
-      <string>Gas amount to include:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="1" colspan="4">
+   <item row="6" column="1" colspan="4">
     <widget class="QLineEdit" name="textbox_data">
      <property name="text">
       <string/>
@@ -167,7 +134,47 @@
      </property>
     </widget>
    </item>
-   <item row="17" column="0" colspan="5">
+   <item row="15" column="1">
+    <widget class="QLineEdit" name="textbox_privatekey">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string>Enter private key (hex)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="1">
+    <widget class="QLineEdit" name="textbox_keystore">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Enter filepath to keystore</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_nonce">
+     <property name="text">
+      <string>Current nonce value:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_gas">
+     <property name="text">
+      <string>Gas amount to include:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="18" column="0" colspan="5">
     <widget class="QTextBrowser" name="textbrowser_result">
      <property name="enabled">
       <bool>true</bool>
@@ -184,14 +191,7 @@ p, li { white-space: pre-wrap; }
      </property>
     </widget>
    </item>
-   <item row="2" column="0">
-    <widget class="QLabel" name="label_nonce">
-     <property name="text">
-      <string>Current nonce value:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1" colspan="3">
+   <item row="2" column="1" colspan="3">
     <widget class="QLineEdit" name="textbox_amount">
      <property name="whatsThis">
       <string/>
@@ -216,14 +216,14 @@ p, li { white-space: pre-wrap; }
      </property>
     </widget>
    </item>
-   <item row="10" column="0">
+   <item row="11" column="0">
     <widget class="QLabel" name="label_keystore">
      <property name="text">
       <string>Keystore JSON file:</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="4">
+   <item row="2" column="4">
     <widget class="QComboBox" name="combobox_unit">
      <item>
       <property name="text">
@@ -232,44 +232,44 @@ p, li { white-space: pre-wrap; }
      </item>
      <item>
       <property name="text">
-       <string>finney</string>
+       <string>finney (milli)</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>szabo</string>
+       <string>szabo (micro)</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>shannon</string>
+       <string>shannon (nano)</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>lovelace</string>
+       <string>lovelace (pico)</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>babbage</string>
+       <string>babbage (femto)</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>wei</string>
+       <string>wei (atto)</string>
       </property>
      </item>
     </widget>
    </item>
-   <item row="6" column="0" rowspan="2">
+   <item row="7" column="0" rowspan="2">
     <widget class="QLabel" name="label_networkid">
      <property name="text">
       <string>Network ID:</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="1" colspan="4">
+   <item row="4" column="1" colspan="4">
     <widget class="QLineEdit" name="textbox_gasprice">
      <property name="inputMethodHints">
       <set>Qt::ImhDigitsOnly</set>
@@ -282,7 +282,7 @@ p, li { white-space: pre-wrap; }
      </property>
     </widget>
    </item>
-   <item row="0" column="1" colspan="4">
+   <item row="1" column="1" colspan="4">
     <widget class="QLineEdit" name="textbox_receiver">
      <property name="whatsThis">
       <string/>
@@ -307,14 +307,14 @@ p, li { white-space: pre-wrap; }
      </property>
     </widget>
    </item>
-   <item row="14" column="0">
+   <item row="15" column="0">
     <widget class="QLabel" name="label_privatekey">
      <property name="text">
       <string>Private key:</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="1" colspan="4">
+   <item row="3" column="1" colspan="4">
     <widget class="QLineEdit" name="textbox_nonce">
      <property name="text">
       <string/>
@@ -324,7 +324,7 @@ p, li { white-space: pre-wrap; }
      </property>
     </widget>
    </item>
-   <item row="15" column="0" colspan="5">
+   <item row="16" column="0" colspan="5">
     <widget class="QPushButton" name="pushbutton_generate">
      <property name="font">
       <font>
@@ -337,20 +337,26 @@ p, li { white-space: pre-wrap; }
      </property>
     </widget>
    </item>
-   <item row="13" column="1">
-    <widget class="QLineEdit" name="lineedit_keystore_pw">
+   <item row="14" column="1">
+    <widget class="QLineEdit" name="textbox_keystore_pw">
+     <property name="inputMethodHints">
+      <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
+     </property>
      <property name="text">
       <string/>
      </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
      <property name="readOnly">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="placeholderText">
       <string>Keystore password</string>
      </property>
     </widget>
    </item>
-   <item row="6" column="4">
+   <item row="7" column="4">
     <widget class="QRadioButton" name="radiobutton_networkid_dropdown">
      <property name="acceptDrops">
       <bool>false</bool>
@@ -372,7 +378,7 @@ p, li { white-space: pre-wrap; }
      </attribute>
     </widget>
    </item>
-   <item row="8" column="4">
+   <item row="9" column="4">
     <widget class="QRadioButton" name="radiobutton_networkid_textbox">
      <property name="acceptDrops">
       <bool>false</bool>
@@ -394,7 +400,7 @@ p, li { white-space: pre-wrap; }
      </attribute>
     </widget>
    </item>
-   <item row="14" column="4">
+   <item row="15" column="4">
     <widget class="QRadioButton" name="radiobutton_key">
      <property name="text">
       <string>Private key</string>
@@ -407,14 +413,14 @@ p, li { white-space: pre-wrap; }
      </attribute>
     </widget>
    </item>
-   <item row="13" column="0">
-    <widget class="QLabel" name="label">
+   <item row="14" column="0">
+    <widget class="QLabel" name="label_keystore_pw">
      <property name="text">
       <string>Keystore password:</string>
      </property>
     </widget>
    </item>
-   <item row="13" column="4">
+   <item row="14" column="4">
     <widget class="QRadioButton" name="radiobutton_keystore">
      <property name="text">
       <string>Keystore</string>
@@ -427,10 +433,27 @@ p, li { white-space: pre-wrap; }
      </attribute>
     </widget>
    </item>
-   <item row="10" column="4">
+   <item row="11" column="4">
     <widget class="QPushButton" name="pushbutton_browse">
      <property name="text">
       <string>Browse</string>
+     </property>
+    </widget>
+   </item>
+   <item row="19" column="0">
+    <widget class="QLabel" name="label_address_text">
+     <property name="text">
+      <string>transaction data valid for:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="19" column="1" colspan="2">
+    <widget class="QLabel" name="label_address_sender">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
      </property>
     </widget>
    </item>

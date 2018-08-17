@@ -1,0 +1,7 @@
+- write GOOD tests
+- add checksum check (optional, checkbox)
+- add depencies
+- create clean project
+- implement warning if: 
+  -> scrypt is not installed (no keystore json support)
+  -> python-bitcoinlib is not installed (not priv key to adr, but we can workaround this issue)
