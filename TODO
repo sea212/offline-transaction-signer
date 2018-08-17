@@ -5,3 +5,4 @@
 - implement warning if: 
   -> scrypt is not installed (no keystore json support)
   -> python-bitcoinlib is not installed (not priv key to adr, but we can workaround this issue)
+- Add automatic gas increment depending on the data input (zeroes: 4, nonzeroes: 68)

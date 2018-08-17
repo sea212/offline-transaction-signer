@@ -68,7 +68,7 @@ class MainWindow(QDialog):
             "ether":10**18}
         unit = self.combobox_unit.currentText()
 
-        amount = int(float(self.textbox_amount.text()) * unitconv[unit])
+        amount = int(float(self.textbox_amount.text().replace(",", ".")) * unitconv[unit])
         assert(amount >= 0)
 
         nonce = int(self.textbox_nonce.text())
