@@ -7,6 +7,7 @@ from json import load as jload
 from rlp import encode as rlpencode
 from PyQt5 import uic
 from PyQt5.QtWidgets import QMainWindow, QApplication, QDialog, QFileDialog
+from math import ceil
 
 
 class MainWindow(QDialog):
@@ -80,7 +81,15 @@ class MainWindow(QDialog):
         gas = int(self.textbox_gas.text())
         assert(gas >= 0)
 
-        data = self.textbox_data.text().encode("utf-8")
+        #data = self.textbox_data.text().encode("utf-8")
+        data = self.textbox_data.text()
+        
+        # try to get data from base16 input
+        try:
+            ldata = ceil(len(data[2:])/2) if data[:2] == "0x" else ceil(len(data)/2)
+            data = int(data, 16).to_bytes(ldata, "big")
+        except ValueError as e:
+            data = data.encode("utf-8")
 
         # from which field do we get the networkid?
         if (self.radiobutton_networkid_textbox.isChecked()):
@@ -95,7 +104,7 @@ class MainWindow(QDialog):
         # how to retrieve the private key?
         if (self.radiobutton_key.isChecked()):
             # directly
-            priv_key = self.textbox_privatekey().text()
+            priv_key = self.textbox_privatekey.text()
 
         else:
             # keystore
