@@ -1,0 +1,6 @@
+pyqt5
+ethereum
+bitcoin
+rlp
+pysha3
+scrypt
