@@ -9,3 +9,5 @@ who can decode the data?
 
 
 This readme is in alpha stage as well and will be improved massively in the future
+
+WARNING: This is a pre-alpha tool which was not tested enough. It SHOULD NOT be used on mainnet. Use on mainnet at your own risk
